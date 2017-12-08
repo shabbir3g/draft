@@ -1,0 +1,185 @@
+
+@media (max-width: 1199px) {
+    /* Header Styles =================================== */
+    
+    .navbar .navbar-header {
+        float: none;
+        padding: 0;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    .navbar .navbar-header .navbar-toggle {
+        margin: 20px 15px;
+        display: block;
+        border: 0;
+		padding: 31px 9px;
+    }
+    .navbar .navbar-header .navbar-toggle:hover .icon-bar:nth-child(1) {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+    }
+   .navbar .navbar-header .navbar-toggle:hover .icon-bar:nth-child(3) {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+    }
+	.navbar .navbar-header .navbar-toggle:hover,
+    .navbar .navbar-header .navbar-toggle:focus {
+        background: transparent;
+    }
+    .navbar .navbar-header .navbar-toggle:hover:before,
+    .navbar .navbar-header .navbar-toggle:focus:before {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    .navbar .navbar-header .navbar-toggle.in .icon-bar {
+        -webkit-transition: -webkit-transform 150ms linear;
+        transition: -webkit-transform 150ms linear;
+        transition: transform 150ms linear;
+        transition: transform 150ms linear, -webkit-transform 150ms linear;
+    }
+    .navbar .navbar-header .navbar-toggle.in .icon-bar:nth-child(1) {
+        -webkit-transform: translateY(6px);
+        transform: translateY(6px);
+    }
+    .navbar .navbar-header .navbar-toggle.in .icon-bar:nth-child(1) .inner {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    .navbar .navbar-header .navbar-toggle.in .icon-bar:nth-child(2) {
+        opacity: 0;
+    }
+    .navbar .navbar-header .navbar-toggle.in .icon-bar:nth-child(3) {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+    .navbar .navbar-header .navbar-toggle.in .icon-bar:nth-child(3) .inner {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    .navbar .navbar-header .navbar-toggle .icon-bar {
+        width: 25px;
+        margin-bottom: 4px;
+        background: transparent;
+        -webkit-transition: -webkit-transform 150ms linear 150ms;
+        transition: -webkit-transform 150ms linear 150ms;
+        transition: transform 150ms linear 150ms;
+        transition: transform 150ms linear 150ms, -webkit-transform 150ms linear 150ms;
+    }
+    .navbar .navbar-header .navbar-toggle .icon-bar .inner {
+        display: block;
+        -webkit-transition: background-color 150ms linear, opacity 0s linear 150ms, -webkit-transform 150ms linear;
+        transition: background-color 150ms linear, opacity 0s linear 150ms, -webkit-transform 150ms linear;
+        transition: transform 150ms linear, background-color 150ms linear, opacity 0s linear 150ms;
+        transition: transform 150ms linear, background-color 150ms linear, opacity 0s linear 150ms, -webkit-transform 150ms linear;
+        width: 100%;
+        height: 2px;
+        background-color: #68BC4D;
+    }
+
+    .navbar .navbar-collapse {
+        margin: 0 -15px 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-top: 1px solid #e7e7e7 !important;
+    }
+    .navbar .navbar-collapse.collapse {
+        display: none !important;
+    }
+	.navbar .navbar-collapse.collapse.collapsing {
+        overflow: hidden !important;
+    }
+    .navbar .navbar-collapse.collapse.in {
+		display: block !important;
+	}
+    
+    .navbar .navbar-collapse .nav {
+        float: none !important;
+        margin: 15px 0;
+    }
+    .navbar .navbar-collapse .nav li {
+        float: none;
+        display: block;
+    }
+    .navbar .navbar-collapse .nav li a {
+		width: 100%;
+		padding: 4px 15px;
+		text-align: center;
+		font-size: 16px;
+	}
+    .navbar .navbar-collapse .nav li a:after {
+        content: inherit;
+        display: none;
+    }
+	.navbar-collapse.in {
+		overflow-y: inherit;
+	}
+	.banner .navbar-brand {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		display: inline;
+		height: 169px;
+		text-align: center;
+		left: 0;
+	}
+}
+
+@media all and (max-width: 991px){
+	.single-hmachine {
+		width: 50%;
+	}
+	.hproduct-section h2:after,.hproduct-section h2:before {
+		display: block;
+		margin: 0;
+	}
+}
+@media all and (max-width: 600px){
+	.single-hmachine {
+		width: 100%;
+		float: none;
+		overflow: hidden;
+	}
+	.single-partner {
+		float: none;
+		width: 100%;
+		overflow: hidden;
+		margin-bottom: 1px;
+	}
+	.partnar-cont .single-partner:first-child {
+		width: 100%;
+	}
+	.navbar-default {
+		background-color: rgba(255,255,255, .8);
+		height: inherit;
+		width: 100%;
+	}
+	.banner {
+		height: 500px;
+	}
+	.hproduct-section {
+		background-size: cover;
+	}
+	.hproduct-section h2:after,.hproduct-section h2:before {
+		display: block;
+		margin: 0;
+	}
+	.hproduct-section h2 {
+		overflow: hidden;
+	}
+	.partnar-cont .single-partner:first-child {
+		border-left: none;
+		padding-left: 0;
+	}
+	.logo-image .navbar-brand:last-child {
+		padding: 0 15px;
+		display: none;
+	}
+}
+@media all and (max-width: 364px){
+	
+	.navbar .navbar-header .navbar-toggle {
+		margin: 0;
+		display: inherit;
+	}
+}
