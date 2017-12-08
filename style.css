@@ -552,6 +552,8 @@ body.rtl .col-md-1, body.rtl .col-md-10, body.rtl .col-md-11, body.rtl .col-md-1
 	top: 29%;
 	}
 }
+
+/* scroll button siwtcher*/
 .scroll-btn {
 	display: block;
 	position: absolute;
@@ -626,4 +628,8 @@ body.rtl .lan-switcher{
 	left: 25px;
 	right: inherit;
 }
+
+
+
+
 
