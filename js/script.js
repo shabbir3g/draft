@@ -1,8 +1,29 @@
 (function ($) {
 	"use strict";
 	
-	
-
+		$(document).ready(function(){
+			
+			 $("body.rtl .all-hmachine .owl-carousel").owlCarousel({
+			   items:4,
+			   loop: true,
+				autoplay: true,
+				rtl:true
+			});
+		
+			 $(".all-hmachine .owl-carousel").owlCarousel({
+			   items:4,
+			   loop: true,
+				autoplay: true,
+				rtl:false
+			});
+		  $(".owl-carousel").owlCarousel({
+			   items:1,
+			   loop: true,
+				autoplay: true,
+			});
+		
+			
+		});
 	
 	// scroll bottom
 	
@@ -15,7 +36,7 @@
 		$('.'+theClass).parent('li').addClass('active');
 		//Animate
 		$('html, body').stop().animate({
-			scrollTop: $( $(this).attr('href') ).offset().top - 0
+			scrollTop: $( $(this).attr('href') ).offset().top - 33
 		}, 1000);
 		return false;
 	  });

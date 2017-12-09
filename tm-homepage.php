@@ -6,10 +6,23 @@
 get_header(); ?>
 
 
-<?php $home_banner = get_field('home_banner'); 
-if($home_banner): ?>
-<div class="banner " style="background-image: url(<?php echo $home_banner['url']; ?>); background-position: left center;">
-<?php endif; ?>
+<div class="banner ">
+	<div class="slider owl-carousel"> 
+		
+		<?php $home_banner = get_field('home_banner'); 
+		
+		
+		if($home_banner): 
+		foreach($home_banner as $slides): ?>
+			
+		<div class="slides"> 
+			<img src="<?php echo $slides['url']; ?>" alt="" />
+		</div>
+
+		
+		<?php endforeach; endif; ?>
+	</div>
+	<div class="hsmooth-scroll"> 
 		<?php $home_banner_scroll = get_field('home_banner_scroll'); 
 		if($home_banner_scroll): ?>
 		 <span class="scroll-btn">
@@ -20,12 +33,12 @@ if($home_banner): ?>
 				</span>
 			</a>
 		  <a class="chev" href="#hproduct"><i class="fa fa-chevron-down"></i></a>
-
 		</span>
-
 		<?php endif; ?>
-		
 	</div>
+</div>
+	
+	
 
 
 
@@ -118,23 +131,29 @@ if($home_banner): ?>
 		</div>
 	</section>
 
-	<section class="hdescript-section"> 
+	<section class="hdescripts-section"> 
 			<div class="all-hmachine"> 
 
-
-				<?php $machinary = get_field('machinary'); 
-					if($machinary): 
-
-
-					foreach($machinary as $mach):	?>
-				<div class="single-hmachine rotateInDownLeft wow"> 
-					<img src="<?php echo $mach['image']['url'] ?>" alt="" />
+				<div class="single-hmachine"> 
 					<div class="overlay"> 
-						<h2><a href="#"><?php echo $mach['title']; ?></a></h2>
+						<h2><a href="#">ألبوم الصور</a></h2>
 					</div>
 				</div>
+				<div class="owl-carousel">
+				<?php $machinary_album = get_field('machinary_album'); 
+				if($machinary_album): 
+				foreach($machinary_album as $machi): ?>
+					
+				<div class="slidersmechine"> 
+					<img src="<?php echo $machi['url']; ?>" alt="" />
+				</div>
+
 				
 				<?php endforeach; endif; ?>
+				
+				</div>
+				
+				
 
 
 
