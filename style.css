@@ -42,7 +42,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
   
   src: url('fonts/GESSTwoMedium.otf');
 }
-body{
+
+body.rtl{
+	 font-family: tahoma;
+}
+body.rtl{
 	 font-family: 'GESSTwoMedium';
 }
 .navbar-brand {
@@ -201,13 +205,16 @@ body.rtl .main-menu ul li{
 	background: #072655;
 }
 
-.hproduct-section h2{
+.hproduct-section h3{
 	color: #fff;
 	text-align:center;
 	padding: 40px 0;
 	
 }
-.hproduct-section h2:after {
+.hproduct-section h2{
+	text-align: center;
+}
+.hproduct-section h3:after {
 	content: url('images/line.png');
 	background-size: 10px 10px;
 	background-position: right top;
@@ -216,7 +223,7 @@ body.rtl .main-menu ul li{
 	position: relative;
 	top: -6px;
 }
-.hproduct-section h2:before {
+.hproduct-section h3:before {
 	content: url('images/line.png');
 	background-size: 10px 10px;
 	background-position: right top;
@@ -276,6 +283,7 @@ body.rtl .main-menu ul li{
 	width: 25%;
 	height: 370px;
 	z-index: 9999;
+	display: table;
 	
 }
 body.rtl .single-hmachine{
@@ -291,12 +299,13 @@ body.rtl .all-hmachine{
 .all-hmachine{
 	 position: relative;
  }
-
-.single-hmachine .overlay h2{
-	text-align: center;
+.overlay {
+	display: table-cell;
 	vertical-align: middle;
+}
+.single-hmachine .overlay h2 {
+	text-align: center;
 	display: block;
-	margin-top: 50%;
 }
 .single-hmachine .overlay h2 a{
 	color: #000;
@@ -697,5 +706,99 @@ body.rtl .lan-switcher {
 .slides img{
 	 height: 630px!important; 
 }
+.woocommerce ul.products li.product a h2 .count{
+	display: none;
+}
+.woocommerce ul.products li.product:nth-child(1) a img {
+	width: 100%;
+	height: auto;
+	display: block;
+	margin: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background: #001b43;
+}
+.woocommerce ul.products li.product:nth-child(1) a h2.woocommerce-loop-category__title {
+	background: #00132f;
+	color: #fff;
+	font-size: 24px;
+}
 
+.woocommerce ul.products li.product a h2.woocommerce-loop-product__title {
+	color: #ae0000;
+	text-decoration: none;
+	font-size: 24px;
+}
+body.rtl .single-aboutus {
+	text-align: right;
+}
+
+.woocommerce ul.products li.first, .woocommerce-page ul.products li.first {
+	clear: none !important; 
+	/* margin: 0 3.8% 2.992em 0 !important */
+}
+
+.woocommerce ul.products li.last, .woocommerce-page ul.products li.last {
+	margin-left: none;
+}
+.woocommerce ul.products li.product:nth-child(2) a img {
+	width: 100%;
+	height: auto;
+	display: block;
+	margin: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background: #711e21;
+}
+.woocommerce ul.products li.product:nth-child(2) a h2.woocommerce-loop-category__title {
+	background: #4c080b;
+	color: #fff;
+	font-size: 24px;
+}
+.woocommerce ul.products li.product:nth-child(3) a img {
+	width: 100%;
+	height: auto;
+	display: block;
+	margin: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background: #143b76;
+}
+.woocommerce ul.products li.product:nth-child(3) a h2.woocommerce-loop-category__title {
+	background: #072655;
+	color: #fff;
+	font-size: 24px;
+}
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+
+	width: 29.5%;
+}
+.woocommerce ul.products li.product .button {
+	background: #fff;
+	border: 1px solid #ac2d31;
+	padding: 10px;
+	display: block;
+	margin-top: 20px;
+	color: #ae0000;
+	text-decoration: none;
+}
+.woocommerce ul.products li.product .button:hover{
+	opacity: .8;
+}
+.woocommerce-product-details__short-description p{
+	color: #000;
+	text-align:left;
+}
+.woocommerce .woocommerce-result-count {
+	margin: 0 0 1em;
+	display: none;
+}
+.woocommerce div.product div.summary {
+	margin-bottom: 2em;
+	text-align: left;
+}
+.woocommerce .woocommerce-ordering {
+	margin: 0 0 1em;
+	display: none;
+}
 

@@ -506,3 +506,82 @@ function theme_opt_callback(){ ?>
 
 <?php
 }
+
+
+
+	function is_product_subcategory() {
+		$cat = get_query_var( 'product_cat' );
+		$category = get_term_by( 'slug', $cat, 'product_cat' );
+		return ( $category->parent !== 0 );
+	}
+
+	remove_action('woocommerce_before_main_content','woocommerce_output_content_wrapper', 10);
+	add_action('woocommerce_before_main_content','woocommerce_output', 10);
+	function woocommerce_output(){
+		
+		
+		if(is_shop() ){
+			echo '<div class="banner" style="background-image: url('.get_template_directory_uri().'/images/02.jpg); "></div>
+	<section id="hproduct" class="pageproduct-section"> 
+		<div class="container"> 
+			<div class="all-hpro row">';
+		}
+		elseif ( is_product_category( 'spire' ) || is_product_category( 'spire-ar' ) || is_product_subcategory( 'spire' ) ) {
+		echo '<div class="banner" style="background-image: url('.get_template_directory_uri().'/images/03.jpg); "></div>
+	<section id="hproduct" class="pageproduct-section"> 
+		<div class="container"> v
+			<div class="all-hpro row">';
+			
+		}
+		
+		elseif ( is_product_category( 'draft' ) ||  is_product_category( 'draft-ar' ) ) {
+		echo '<div class="banner" style="background-image: url('.get_template_directory_uri().'/images/draft.jpg); "></div>
+	<section id="hproduct" class="pageproduct-section"> 
+		<div class="container"> 
+			<div class="all-hpro row">';
+			
+		}
+		elseif(is_product_category( 'clean' ) || is_product_category( 'clean-ar' ) || is_product_subcategory( 'clean' ) ){
+			echo '<div class="banner" style="background-image: url('.get_template_directory_uri().'/images/clean-care.jpg); "></div>
+	<section id="hproduct" class="pageproduct-section"> 
+		<div class="container"> 
+			<div class="all-hpro row">';
+		} else{
+			
+			echo '<div class="banner" style="background-image: url('.get_template_directory_uri().'/images/02.jpg); "></div>
+	<section id="hproduct" class="pageproduct-section"> 
+		<div class="container"> 
+			<div class="all-hpro row">';
+		}
+		
+		
+		
+	}
+	
+	remove_action('woocommerce_sidebar','woocommerce_get_sidebar',10);
+	
+	remove_action('woocommerce_after_main_content','woocommerce_output_content_wrapper_end',10);
+	
+	add_action('woocommerce_after_main_content','woocommerce_output_end', 10);
+	function woocommerce_output_end(){
+		
+		echo '</div></div></section>';
+	}
+	
+	remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
+	add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
+	
+	
+	add_action('woocommerce_single_product_summary','woocommerce_template_single_excerpt', 20);
+	
+	
+	remove_action('woocommerce_single_product_summary','woocommerce_template_single_meta', 40);
+	remove_action('woocommerce_after_single_product_summary','woocommerce_output_related_products', 20);
+	
+	
+
+	remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
+	remove_action( 'woocommerce_after_single_product_summary','woocommerce_output_product_data_tabs',10);
+
+
+

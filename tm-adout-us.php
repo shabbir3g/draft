@@ -46,7 +46,7 @@ if($about_banner): ?>
 				<div class="col-md-12 single-aboutus">
 					<?php $ab_bottom_content = get_field('ab_bottom_content'); 
 					if($ab_bottom_content): ?>
-					<?php echo  $ab_top_content; ?>
+					<?php echo  $ab_bottom_content; ?>
 					<?php endif; ?>
 				</div>
 			</div>

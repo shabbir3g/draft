@@ -46,11 +46,17 @@ get_header(); ?>
 	if($product_backgrond): ?>
 	<section style="background-image: url(<?php echo $product_backgrond['url']; ?>); " id="hproduct" class="hproduct-section"> 
 		<div class="container"> 
-
-			<?php $porduct_section_title = get_field('porduct_section_title'); 
+		<?php $porduct_section_title = get_field('porduct_section_title'); 
 			if($porduct_section_title): ?>
-			<h2 class="fadeInUp wow"><?php echo $porduct_section_title; ?></h2>
+			<h3 class="fadeInUp wow"><?php echo $porduct_section_title; ?></h3>
 			<?php endif; ?>
+			
+			
+			<?php echo do_shortcode('[product_categories parent="0"]'); ?>
+			
+	<!-- 	<?php echo do_shortcode('[product_category]'); ?>
+
+			
 			<div class="all-hpro row"> 
 				
 
@@ -85,12 +91,14 @@ get_header(); ?>
 				
 			<?php
 			endforeach;
-				?>
+				?>  -->
 
 			</div>
-		</div>
+		
 	</section>
 	<?php endif; ?>	
+	
+
 
 
 	<?php $welcome_section_background = get_field('welcome_section_background'); 

@@ -68,14 +68,14 @@
 
 				$ins = $instagram['ins'];
 				if($ins):  ?> 
-				<li><a href="<?php echo $ins;  ?>"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="<?php echo $ins;  ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/instagram.png" alt="" /></a></li>
 				<?php endif; ?>
 
 				<?php  $linkedin = get_option('social-val');
 
 				$lin = $linkedin['lin'];
 				if($lin):  ?> 
-				<li><a href="<?php echo $lin; ?>"><i class="fa fa-linkedin-square"></i></a></li>
+				<li><a href="<?php echo $lin; ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/linkedin.png" alt="" /></a></li>
 				<?php endif; ?>
 
 				<?php  $youtube = get_option('social-val');
@@ -83,20 +83,20 @@
 				$yu = $youtube['yu'];
 
 				if($yu):  ?> 
-				<li><a href="<?php echo $yu; ?>"><i class="fa fa-youtube-play"></i></a></li>
+				<li><a href="<?php echo $yu; ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/youtube.png" alt="" /></a></li>
 				<?php endif; ?>
 
 
 				<?php  $twitter = get_option('social-val');
 				$tw = $twitter['tw'];
 				if($tw):  ?> 
-				<li><a href="<?php echo $tw;  ?>"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="<?php echo $tw;  ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/twitter.png" alt="" /></a></li>
 				<?php endif; ?>
 
 				<?php  $facebook = get_option('social-val');
 				$fb = $facebook['fb'];
 				if($fb):  ?> 
-				<li><a href="<?php echo $fb; ?>"><i class="fa fa-facebook-square"></i></a></li>
+				<li><a href="<?php echo $fb; ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/facebook.png" alt="" /></a></li>
 				<?php endif; ?>
 				
 				
